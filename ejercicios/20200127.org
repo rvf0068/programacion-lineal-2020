@@ -1,0 +1,98 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 27 de enero de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_class_options: [twocolumn]
+
+#+latex: \thispagestyle{empty}
+
+1. Resuelve:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & 2x+2y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x,y &\geq  0\\
+      2x+y &\leq 4\\
+      -x-2y &\geq -5
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+2. Resuelve:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Minimizar} \quad & -5x-y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x,y &\geq  0\\
+      3x+y &\leq 7\\
+      -x-y &\geq -3\\
+      -x-2y &\geq -5
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+3. Resuelve:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Minimizar} \quad & x+4y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x,y &\geq  0\\
+      x+y &\leq 7\\
+      x+y &\geq 5\\
+      x &\leq 4\\
+      -y &\geq -4\\
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+4. Resuelve:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & 3x+4y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x,y &\geq  0\\
+      -x+y &\leq 2\\
+      y &\leq 4
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+5. Resuelve:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & -3x+y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x,y &\geq  0\\
+      -x+y &\leq 2\\
+      y &\leq 4
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+6. Resuelve:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & x-2y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x,y &\geq  0\\
+      x+2y &\leq 2\\
+      -x-y &\leq -3
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+7. Grafica las regiones en el espacio definidas por los siguientes
+   conjuntos de desigualdades:
+   1. \(x\geq0\), \(y\geq0\), \(z\geq0\).
+   2. \(x\leq2\), \(y\leq2\), \(z\leq2\), \(x,y,z\geq0\).
+   3. Las desigualdades del inciso b, y además \(x+y+z\leq 5\).
+   4. Las desigualdades del inciso b, y además \(x+y\leq 3\).
+   5. \(-x+z\leq 2\), \(3x+y+2z\leq -4\), \(x,y,z\geq0\).
+   6. \(x+y\leq 1\), \(x,y,z\geq0\).
