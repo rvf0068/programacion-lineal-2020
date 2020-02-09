@@ -1,6 +1,6 @@
 #+title: Ejercicios de programación lineal
 #+options: author:nil  ':t toc:nil
-#+date: 27 de enero de 2020
+#+date: 10 de febrero de 2020
 #+language: es
 #+latex_header: \usepackage[spanish]{babel}
 #+latex_class_options: [twocolumn]
@@ -15,7 +15,7 @@
      \begin{aligned}
       x,y &\geq  0\\
       3x+2y &\leq 4+x\\
-      x+5y &\leq 2y
+      x+5y &\leq 3+2y
      \end{aligned}
    \end{aligned}
    \end{equation*}
