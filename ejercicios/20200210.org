@@ -1,0 +1,95 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 27 de enero de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_class_options: [twocolumn]
+
+#+latex: \thispagestyle{empty}
+
+1. Resuelve:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & 2x+2y+10\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x,y &\geq  0\\
+      3x+2y &\leq 4+x\\
+      x+5y &\leq 2y
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+2. Considera el siguiente problema:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & x+y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x &\geq  0\\
+      1\leq y &\leq 3\\
+      2x+y &\leq 7
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+   - Resuelve el problema por el método gráfico.
+   - Escribe el problema en su forma estándar \((Ax\geq b)\), determinando \(A\),
+     \(b\) y \(c\).
+   - Escribe el problema en su forma simplex \(Ax=b\), determinando \(A\),
+     \(b\) y \(c\).
+
+3. Considera el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}+2x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      3x_{1}+4x_{2} &\leq 12\\
+      x_{1}-x_{2} &\leq 2\\
+      -2x_{1}+x_{2} &\leq 2\\
+       x_{1} &\geq 0\\
+       x_{2} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+   - Resuelve el problema por el método gráfico.
+   - Escribe el problema en su forma estándar, determinando \(A\),
+     \(b\) y \(c\).
+   - Escribe el problema en su forma simplex \((Ax=b)\), determinando
+     \(A\), \(b\) y \(c\).
+
+4. Considera el siguiente problema:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Minimizar} \quad & x+y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x &\geq  0\\
+      y &\geq 0\\
+      2x+y &\geq 2
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+   - Resuelve el problema por el método gráfico.
+   - Escribe el problema en su forma estándar, determinando \(A\),
+     \(b\) y \(c\).
+   - Escribe el problema en su forma simplex, determinando \(A\),
+     \(b\) y \(c\).
+   - Dibuja la región factible del problema en forma simplex en
+     \(\mathbb{R}^{3}\).
+
+5. Una compañía que produce frutas mezcladas tiene en almacén 10,000
+   kilos de peras, 12,000 kilos de duraznos y 8,000 kilos de
+   cerezas. La compañía produce tres mezclas de frutas, que vende en
+   latas de un kilo. La primera combinación contiene la mitad de peras
+   y la mitad de duraznos. La segunda combinación contiene cantidades
+   iguales de cada fruta. La tercera combinación tiene la mitad de
+   duraznos y la mitad de cerezas. Las ganancias por lata vendida por
+   cada combinación son de $3, $4 y $5 respectivamente. 
+
+   Plantea el problema de encontrar la producción que da la ganancia
+   máxima como un problema de programación lineal. Escribe el problema
+   en forma estándar y en forma simplex.
