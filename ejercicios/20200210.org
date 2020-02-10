@@ -36,7 +36,7 @@
    - Resuelve el problema por el método gráfico.
    - Escribe el problema en su forma estándar \((Ax\geq b)\), determinando \(A\),
      \(b\) y \(c\).
-   - Escribe el problema en su forma simplex \(Ax=b\), determinando \(A\),
+   - Escribe el problema en su forma simplex \((Ax=b)\), determinando \(A\),
      \(b\) y \(c\).
 
 3. Considera el siguiente problema:
@@ -57,7 +57,7 @@
    - Resuelve el problema por el método gráfico.
    - Escribe el problema en su forma estándar, determinando \(A\),
      \(b\) y \(c\).
-   - Escribe el problema en su forma simplex \((Ax=b)\), determinando
+   - Escribe el problema en su forma simplex, determinando
      \(A\), \(b\) y \(c\).
 
 4. Considera el siguiente problema:
