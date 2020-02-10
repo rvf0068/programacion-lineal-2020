@@ -12,11 +12,13 @@
    \begin{aligned}
    \text{Maximizar} \quad & 2x+2y+10\\
    \text{sujeto a} \quad &
-     \begin{cases}
+     \left\{
+     \begin{aligned}
       x,y &\geq  0\\
       3x+2y &\leq 4+x\\
       x+5y &\leq 3+2y
-     \end{cases}
+     \end{aligned}
+     \right.
    \end{aligned}
    \end{equation*}
 
@@ -25,11 +27,13 @@
    \begin{aligned}
    \text{Maximizar} \quad & x+y\\
    \text{sujeto a} \quad &
-     \begin{cases}
+     \left\{
+     \begin{aligned}
       x &\geq  0\\
       1\leq y &\leq 3\\
       2x+y &\leq 7
-     \end{cases}
+     \end{aligned}
+     \right.
    \end{aligned}
    \end{equation*}
 
@@ -44,12 +48,14 @@
     \begin{aligned}
    \text{Maximizar} \quad & x_{1}+2x_{2}\\
    \text{sujeto a} \quad &
-     \begin{cases}
+     \left\{
+     \begin{aligned}
       3x_{1}+4x_{2} &\leq 12\\
       x_{1}-x_{2} &\leq 2\\
       -2x_{1}+x_{2} &\leq 2\\
        x_{1},x_{2} &\geq 0
-     \end{cases}
+     \end{aligned}
+     \right.
    \end{aligned}
    \end{equation*}
 
@@ -64,10 +70,12 @@
    \begin{aligned}
    \text{Minimizar} \quad & x+y\\
    \text{sujeto a} \quad &
-     \begin{cases}
+     \left\{
+     \begin{aligned}
       x,y &\geq  0\\
       2x+y &\geq 2
-     \end{cases}
+     \end{aligned}
+     \right.
    \end{aligned}
    \end{equation*}
 
