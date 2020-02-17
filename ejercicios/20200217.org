@@ -1,0 +1,76 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 17 de febrero de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=3cm]{geometry}
+#+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+1. Un gerente está planeando cómo distribuir la producción de dos
+   productos entre dos máquinas. Para ser manufacturado cada producto
+   requiere cierto tiempo (en horas) en cada una de las máquinas.
+
+   El tiempo requerido está resumido en la siguiente tabla:
+
+   |------------------+---+---|
+   | Producto/Máquina | 1 | 2 |
+   |------------------+---+---|
+   | A                | 1 | 1 |
+   | B                | 2 | 1 |
+   |------------------+---+---|
+
+   La máquina 1 está disponible 40 horas a la semana y la 2 está
+   disponible 34 horas a la semana.
+
+   Si la utilidad obtenida al vender los productos A y B es de 2, 3
+   pesos por unidad, respectivamente, ¿cuál debe ser la producción
+   semanal que maximiza la utilidad? ¿Cuál es la utilidad máxima?
+
+2. Una compañía acerera debe planear el uso semanal de una máquina que
+   produce dos tipos de objetos: aros y tornillos. Los productos salen
+   de la máquina a diferentes velocidades:
+   | Aros      | 200 kgs/h |
+   | Tornillos | 140 kgs/h |
+   Los ingresos por los productos son los siguientes:
+   | Aros      | $25/kg |
+   | Tornillos | $30/kg |
+   Debido a estudios de demanda, se colocaron las siguientes cotas
+   superiores en la producción:
+   | Aros      | 6000 kgs |
+   | Tornillos | 4000 kgs |
+   Suponiendo que la máquina está disponible 40 horas en la semana,
+   plantea el problema de encontrar el uso óptimo de la máquina como
+   un problema de programación lineal y resuélvelo. Escribe el
+   problema en forma simplex.
+
+3. Una persona desea invertir 100000 pesos en tres acciones. La
+   primera acción da un beneficio de 5% sobre lo invertido, la segunda
+   un beneficio del 6% y la tercera un beneficio del 6.5%. En ninguna
+   acción puede invertir más del 40% del capital total, y en la
+   segunda debe invertir almenos 25000 pesos. Plantea el problema de
+   encontrar la ganancia máxima al invertir como un problema de
+   programación lineal. Escribe el problema en forma estándar y en
+   forma simplex.
+
+4. Supongamos que un estudio ha demostrado que la demanda de autobuses
+   en cierta ciudad con respecto a la hora del día está regida por la
+   siguiente tabla:
+   | Hora     | Cantidad de autobuses |
+   |----------+-----------------------|
+   | 12am-4am |                     4 |
+   | 4am-8am  |                     8 |
+   | 8am-12pm |                    10 |
+   | 12pm-4pm |                     7 |
+   | 4pm-8pm  |                    12 |
+   | 8pm-12am |                     4 |
+   Supongamos que un autobús debe operar exactamente ocho horas
+   consecutivas, y que operan en turnos empezando cada cuatro horas a
+   partir de las 12am. Plantea el problema de encontrar la cantidad
+   mínima de autobuses que deben adquirirse para cubrir la
+   demanda. [Sugerencia. Usa \(x_{1}\) para la cantidad de autobuses
+   que cubren el turno de las 12am a las 8am, \(x_{2}\) para la
+   cantidad de autobuses que cubren el turno de las 4am a las 12pm,
+   etc. Nota que el último turno va de las 8pm a las 4am del siguiente
+   día.] Escribe el problema en forma estándar y en forma simplex.
+
