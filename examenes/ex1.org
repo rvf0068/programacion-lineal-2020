@@ -1,0 +1,114 @@
+#+title: Primer Examen de Programación Lineal
+#+author: Licenciatura en Matemáticas Aplicadas, UAEH
+#+date: 24 de febrero de 2020
+#+language: es
+
+#+options: toc:nil ':t
+
+#+latex_header: \usepackage[margin=2.5cm]{geometry}
+#+latex_header: \usepackage[spanish,mexico]{babel}
+#+latex_header: \usepackage{tikz}
+
+#+latex_class_options: [twocolumn]
+
+#+latex: \thispagestyle{empty}
+
+*NOMBRE:*
+#+latex: \hrulefill
+
+#+latex: \medskip
+
+*INSTRUCCIONES:* Hay 6 preguntas en este examen, debes escoger cinco
+de ellas, marcando algún modo claro e inequívoco las preguntas
+escogidas. Recuerda explicar sin escatimar en detalles las respuestas
+a las preguntas. Tienes 1 hora y 50 minutos para resolverlo.
+
+1. Resuelve el siguiente problema:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & x+3y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      3x+y &\leq 6\\
+      x,y &\geq  0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+2. Resuelve el siguiente problema 
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 3x_{1}+x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1} &\leq 5\\
+      x_{2} &\leq 4\\
+      x_{1}-x_{2} &\leq 3\\
+       x_{1},x_{2} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+3. Resuelve el siguiente problema 
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 2x_{1}+x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}-x_{2} &\leq 2\\
+      -2x_{1}+x_{2} &\leq 2\\
+      3x_{1}+4x_{2} &\leq 12\\
+      x_{1}+x_{2} &\geq 1\\
+       x_{1},x_{2} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+4. Escribe el siguiente problema en forma estándar y en forma simplex
+   (No es necesario resolverlo)
+   \begin{equation*}
+   \begin{aligned}
+   \text{Minimizar} \quad & x_{1}-x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      3x_{1}-x_{2} & \geq 3\\
+      x_{1}+x_{2} &\geq -8\\
+      x_{1},x_{2} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+5. Una compañía mueblera fabrica tres tipos de libreros: el
+   "intelectual", el "juvenil", y el "ejecutivo". Cada librero es
+   elaborado utilizando tres tipos de madera: roble, pino y caoba. El
+   librero tipo "intelectual" requiere 2 unidades cuadradas de hoja de
+   roble, 6 de pino y 4 de caoba. El librero tipo "juvenil" requiere
+   respectivamente 1, 4 y 3 unidades cuadradas de hoja de roble, pino
+   y caoba. Y el librero tipo "ejecutivo" requiere respectivamente 2,
+   2 y 8 unidades cuadradas de hoja de pino, roble y caoba.
+
+   La ganancia por librero vendido de los tipos "intelectual",
+   "juvenil" y "ejecutivo" es respectivamente de $20, $5 y
+   $30. Suponiendo que la compañía dispone en sus bodegas de 100
+   unidades cuadradas de hoja de roble, 600 unidades de pino y 320
+   unidades de caoba, plantea el problema de encontrar la producción
+   que maximice el ingreso como un problema de programación lineal.
+
+6. Supongamos que un estudio ha demostrado que la demanda de autobuses
+   en cierta ciudad con respecto a la hora del día está regida por la
+   siguiente tabla:
+   | Hora     | Cantidad de autobuses |
+   |----------+-----------------------|
+   | 12am-4am |                     4 |
+   | 4am-8am  |                     8 |
+   | 8am-12pm |                    15 |
+   | 12pm-4pm |                    10 |
+   | 4pm-8pm  |                    17 |
+   | 8pm-12am |                     5 |
+   Supongamos que un autobús debe operar exactamente ocho horas
+   consecutivas, y que operan en turnos empezando cada cuatro horas a
+   partir de las 12am. Plantea el problema de encontrar la cantidad
+   mínima de autobuses que deben adquirirse para cubrir la
+   demanda como un problema de programación lineal.
+
+
