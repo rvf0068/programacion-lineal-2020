@@ -97,14 +97,15 @@ a las preguntas. Tienes 1 hora y 50 minutos para resolverlo.
 6. Supongamos que un estudio ha demostrado que la demanda de autobuses
    en cierta ciudad con respecto a la hora del día está regida por la
    siguiente tabla:
-   | Hora     | Cantidad de autobuses |
-   |----------+-----------------------|
-   | 12am-4am |                     4 |
-   | 4am-8am  |                     8 |
-   | 8am-12pm |                    15 |
-   | 12pm-4pm |                    10 |
-   | 4pm-8pm  |                    17 |
-   | 8pm-12am |                     5 |
+   | Hora        | Cantidad de autobuses |
+   |-------------+-----------------------|
+   | 12am-4am    |                     4 |
+   | 4am-8am     |                     8 |
+   | 8am-12pm    |                    15 |
+   | 12pm-4pm    |                    10 |
+   | 4pm-8pm     |                    17 |
+   | 8pm-12am    |                     5 |
+   | turno extra |                 67676 |
    Supongamos que un autobús debe operar exactamente ocho horas
    consecutivas, y que operan en turnos empezando cada cuatro horas a
    partir de las 12am. Plantea el problema de encontrar la cantidad
