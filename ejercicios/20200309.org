@@ -1,0 +1,63 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 9 de marzo de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=3cm]{geometry}
+#+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+1. Resuelve el problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}-2x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      2x_{1}-x_{2} &\geq 0\\
+      -2x_{1}+3x_{2} &\leq 6\\
+       x_{1},x_{2} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+2. Resuelve 
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}+4x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}+2x_{2} &\leq 5\\
+      2x_{1}+x_{2} &= 4\\
+      -x_{1}+x_{2} &\leq -1\\
+       x_{1},x_{2} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+3. Un gerente está planeando cómo distribuir la producción de tres
+   productos entre dos máquinas. Para ser manufacturado cada producto
+   requiere cierto tiempo (en horas) en cada una de las máquinas.
+
+   El tiempo requerido está resumido en la siguiente tabla:
+
+   |------------------+---+---|
+   | Producto/Máquina | 1 | 2 |
+   |------------------+---+---|
+   | A                | 1 | 1 |
+   | B                | 2 | 1 |
+   | C                | 2 | 2 |
+   |------------------+---+---|
+
+   La máquina 1 está disponible 40 horas a la semana y la 2 está
+   disponible 34 horas a la semana.
+
+   Si la utilidad obtenida al vender los productos A, B y C es de 2, 3
+   y 5 pesos por unidad, respectivamente, ¿cuál debe ser la producción
+   semanal que maximiza la utilidad? ¿Cuál es la utilidad máxima?
+
+
+
+
+
+
+
