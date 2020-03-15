@@ -1,0 +1,64 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 16 de marzo de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=3cm]{geometry}
+#+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+# Vanderbei. Linear Programming
+
+# p.17
+1. Resuelve el problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & -2x_{1}-x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      -x_{1}+x_{2} &\leq -1\\
+      -x_{1}-2x_{2} &\leq -2\\
+       x_{2} &\leq 1\\
+       x_{1}, x_{2} & \geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+  # 2.1 p 20
+2. Resuelve 
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 6x_{1}+8x_{2}+5x_{3}+9x_{4}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      2x_{1}+x_{2} +x_{3}+3x_{4}&\leq 5\\
+      x_{1}+3x_{2}+x_{3}+2x_{4} &\leq 3\\
+       x_{1},x_{2},x_{3},x_{4} &\geq 0\\
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+  # 2.9 p 21
+3. Resuelve 
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 2x_{1}+3x_{2}+4x_{3}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+            -2x_{2}-3x_{3} &\geq -5\\
+      x_{1}+x_{2}+2x_{3} &\leq 4\\
+      x_{1}+2x_{2}+3x_{3} &\leq 7\\
+       x_{1},x_{2},x_{3} &\geq 0\\
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+   # 2.10 p 21
+4. Resuelve 
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 6x_{1}+8x_{2}+5x_{3}+9x_{4}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}+x_{2} +x_{3}+x_{4}&= 1\\
+       x_{1},x_{2},x_{3},x_{4} &\geq 0\\
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
