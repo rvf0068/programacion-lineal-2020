@@ -1,0 +1,63 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 23 de marzo de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=3cm]{geometry}
+#+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+1. Resuelve el siguiente problema:
+   \begin{equation*}
+   \begin{aligned}
+   \text{Maximizar} \quad & 2x+y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      4x+y &\leq 150\\
+      2x-3y &\leq -40\\
+      x &\geq  0\\
+      y &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+2. Resuelve el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 4x_{1}+2x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      -2x_{1}+x_{2} &\leq 4\\
+      x_{1}+2x_{2} &\geq 2\\
+       x_{1} &\geq 0\\
+       x_{2} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+3. Resuelve el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 5x_{1}+4x_{2}+3x_{3}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      2x_{1}+3x_{2}+x_{3} &\leq 5\\
+      4x_{1}+x_{2}+2x_{3} &\leq 11\\
+      3x_{1}+4x_{2}+2x_{3} &\leq 8\\
+       x_{1},x_{2},x_{3} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+4. Resuelve el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 4x_{1}+x_{2}+3x_{3}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}+4x_{2} &\leq 1\\
+      3x_{1}-x_{2}+x_{3} &\leq 3\\
+       x_{1},x_{2},x_{3} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
