@@ -1,0 +1,52 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 30 de marzo de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=3cm]{geometry}
+#+latex_header: \usepackage{systeme}
+#+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+1. Resuelve el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}+2x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}+3x_{2}+x_{3} &= 4\\
+      -x_{1}+2x_{2}+x_{3} &= 2\\
+       x_{1},x_{2},x_{3} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+2. Resuelve el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}+2x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}+3x_{2}+x_{3} &= 4\\
+      2x_{1}+2x_{2}+x_{3} &= 2\\
+       x_{1},x_{2},x_{3} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+  # Vanderbei. Linear Programming
+  # p.25
+3. Resuelve el problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 3-\frac{1}{2}x_{1}+2x_{2}-\frac{3}{2}x_{4}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      \frac{1}{2}x_{1}+x_{3}+\frac{1}{2}x_{4} &= 1\\
+      -x_{1}+x_{2}-x_{4}+x_{5} &= 0\\
+       x_{1}, x_{2},x_{3},x_{4},x_{5} & \geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+   
