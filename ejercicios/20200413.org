@@ -1,0 +1,66 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 13 de abril de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=3cm]{geometry}
+#+latex_header: \usepackage{systeme}
+# #+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+1. Resuelve el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 3x_{1}+5x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}+2x_{2}+x_{3} &= 5\\
+      x_{1}+x_{4}       &= 3\\
+      x_{2}       +x_{5}&= 2\\
+       x_{1},x_{2},x_{3},x_{4},x_{5} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+2. Resuelve el siguiente problema:
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}+4x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      x_{1}+2x_{2}+x_{3} &= 5\\
+      2x_{1}+x_{2}       &= 4\\
+      x_{1}-x_{2}       -x_{4}&= 3\\
+       x_{1},x_{2},x_{3},x_{4} &\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+3. Resuelve el siguiente problema.
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 2x_{1}+x_{2}\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      2x_{1}+x_{2}&\leq 4\\
+      2x_{1}+3x_{2}&\leq 3\\
+      4x_{1}+x_{2}&\leq 5\\
+      x_{1}+5x_{2}&\leq 1\\
+       x_{1},x_{2}&\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+
+4. Plantea la siguiente situación como un problema de programación
+   lineal. NO es necesario resolverlo.
+
+   Una mujer quiere elaborar un programa semanal de ejercicios, el
+   cual incluirá trote, ciclismo y natación. A fin de variar el
+   ejercicio, ella planea dedicar al ciclismo por lo menos el mismo
+   tiempo que le dedicará al trote y la natación combinados. Además
+   quiere nadar al menos dos horas por semana. Si en el trote consume
+   600 calorías por hora, en el ciclismo 300 calorías por hora y en la
+   natación 300 calorías por hora, ¿cuántas horas deberá dedicar a
+   cada tipo de ejercicio, si quiere quemar en total al menos 3000
+   calorías semanales en el menor tiempo posible? 
+
