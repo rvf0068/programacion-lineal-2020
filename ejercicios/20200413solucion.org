@@ -1,0 +1,440 @@
+#+title: Método simplex con coeficientes
+#+options: author:nil ':t toc:nil 
+
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage{systeme}
+#+latex_header: \usepackage{spalign}
+#+latex_header: \usepackage{tikz}
+
+#+latex_header: \spalignsysdelims{.}{.}
+#+latex_header: \tikzset{math/.style={draw, execute at begin node={$}, execute at end node={$}}}
+#+latex_header: \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+#+latex_header:    \node[shape=circle,math,draw,inner sep=1pt] (char) {#1};}}
+
+#+beamer_header: \setbeamersize{text margin left=1em,text margin right=1em}
+#+beamer_header: \setbeamertemplate{navigation symbols}{}
+#+beamer_header: \useinnertheme{rounded}
+
+* Problema 1
+
+  Resuelve el siguiente problema:
+
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 3x_{1}+5x_{2}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      x_{1}+2x_{2}+x_{3} = 5,
+      x_{1}+x_{4}       = 3,
+      x_{2}       +x_{5} = 2}\\
+       & x_{1},x_{2},x_{3},x_{4},x_{5} \geq 0
+   \end{aligned}
+   \end{equation*}
+
+* Tablero inicial
+
+  #+begin_scriptsize
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 3x_{1}+5x_{2}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      x_{1}+2x_{2}+x_{3} = 5,
+      x_{1}+x_{4}       = 3,
+      x_{2}       +x_{5} = 2}\\
+       & x_{1},x_{2},x_{3},x_{4},x_{5} \geq 0
+   \end{aligned}
+   \end{equation*}
+  #+end_scriptsize
+
+  En este caso, el problema ya está en /forma simplex/. Y es más o
+  menos claro que para obtener un tablero inicial, podemos tomar a
+  \(x_{3}, x_{4}, x_{5}\) como soluciones básicas.
+
+  \begin{equation*}
+  \spalignsys{
+  x_{3} = 5 - x_{1} - 2x_{2};
+  x_{4} = 3 - x_{1} \+ \.;
+  x_{5} = 2 \+   \. - x_{2};
+  \hline;
+  z     = \. \+ 3x_{1} + 5x_{2}}
+  \end{equation*}
+
+* Primer paso
+
+  #+begin_scriptsize
+  \begin{equation*}
+  \spalignsys{
+  x_{3} = 5 - x_{1} - 2x_{2};
+  x_{4} = 3 - x_{1} \+ \.;
+  x_{5} = 2 \+   \. - x_{2};
+  \hline;
+  z     = \. \+ 3x_{1} + 5x_{2}}
+  \end{equation*}
+  #+end_scriptsize
+
+  Decidimos aumentar la variable \(x_{1}\). En este caso, se ve que
+  la ecuación que más restringe el crecimiento es la segunda. Por lo
+  que \(x_{1}\) pasa a las variables básicas y \(x_{4}\) pasa a las no
+  básicas. 
+
+  \begin{equation*}
+  \spalignsys{
+  x_{1} = 3 \+ \. - x_{4};
+  x_{3} = 2 - 2x_{2} + x_{4};
+  x_{5} = 2 - x_{2} \+ \.;
+  \hline;
+  z     = 9 + 5x_{2} - 3x_{4}}
+  \end{equation*}
+
+* Segundo paso
+
+  #+begin_scriptsize
+  \begin{equation*}
+  \spalignsys{
+  x_{1} = 3 \+ \. - x_{4};
+  x_{3} = 2 - 2x_{2} + x_{4};
+  x_{5} = 2 - x_{2} \+ \.;
+  \hline;
+  z     = 9 + 5x_{2} - 3x_{4}}
+  \end{equation*}
+  #+end_scriptsize
+
+  Ahora ya la única variable que podemos aumentar es \(x_{2}\). En
+  este caso, se ve que la ecuación que más restringe el crecimiento es
+  la segunda. Por lo que \(x_{2}\) pasa a las variables básicas y
+  \(x_{3}\) pasa a las no básicas.
+
+  \begin{equation*}
+  \spalignsys{
+  x_{1} = 3 \+ \. - x_{4};
+  x_{2} = 1 - \frac{1}{2}x_{3} + \frac{1}{2}x_{4};
+  x_{5} = 1 + \frac{1}{2}x_{3} - \frac{1}{2}x_{4};
+  \hline;
+  z     = 14 - \frac{5}{2}x_{3} - \frac{1}{2}x_{4}}
+  \end{equation*}
+
+* Resultado
+
+  #+begin_scriptsize
+  \begin{equation*}
+  \spalignsys{
+  x_{1} = 3 \+ \. - x_{4};
+  x_{2} = 1 - \frac{1}{2}x_{3} + \frac{1}{2}x_{4};
+  x_{5} = 1 + \frac{1}{2}x_{3} - \frac{1}{2}x_{4};
+  \hline;
+  z     = 14 - \frac{5}{2}x_{3} - \frac{1}{2}x_{4}}
+  \end{equation*}
+  #+end_scriptsize
+
+  Vemos que ya no podemos mejorar el valor de \(z\) incrementando
+  alguna de las variables no básicas \(x_{3},x_{4}\), por lo que el
+  método simplex termina con \(x_{3}=x_{4}=0\), y por lo tanto,
+  \(x_{1}=3\), \(x_{2}=1\), \(x_{5}=1\) con valor máximo \(z=14\) es
+  la solución al problema:
+
+  #+begin_scriptsize
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 3x_{1}+5x_{2}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      x_{1}+2x_{2}+x_{3} = 5,
+      x_{1}+x_{4}       = 3,
+      x_{2}       +x_{5} = 2}\\
+       & x_{1},x_{2},x_{3},x_{4},x_{5} \geq 0
+   \end{aligned}
+   \end{equation*}
+  #+end_scriptsize
+
+* Método simplex usando solo coeficientes
+
+  Vamos a ejemplificar el uso de esta técnica con el problema que
+  acabamos de resolver. Recordemos la sucesión de tableros simplex que
+  vimos
+
+  - 
+    #+begin_scriptsize
+    \begin{equation*}
+    \spalignsys{
+    x_{3} = 5 - x_{1} - 2x_{2};
+    x_{4} = 3 - x_{1} \+ \.;
+    x_{5} = 2 \+   \. - x_{2};
+    \hline;
+    z     = \. \+ 3x_{1} + 5x_{2}}
+    \end{equation*}
+    #+end_scriptsize
+  - 
+    #+begin_scriptsize
+    \begin{equation*}
+    \spalignsys{
+    x_{1} = 3 \+ \. - x_{4};
+    x_{3} = 2 - 2x_{2} + x_{4};
+    x_{5} = 2 - x_{2} \+ \.;
+    \hline;
+    z     = 9 + 5x_{2} - 3x_{4}}
+    \end{equation*}
+    #+end_scriptsize
+  - 
+    #+begin_scriptsize
+    \begin{equation*}
+    \spalignsys{
+    x_{1} = 3 \+ \. - x_{4};
+    x_{2} = 1 - \frac{1}{2}x_{3} + \frac{1}{2}x_{4};
+    x_{5} = 1 + \frac{1}{2}x_{3} - \frac{1}{2}x_{4};
+    \hline;
+    z     = 14 - \frac{5}{2}x_{3} - \frac{1}{2}x_{4}}
+    \end{equation*}
+    #+end_scriptsize
+
+* El primer tablero simplex 
+
+  #+begin_scriptsize
+  \begin{equation*}
+  \spalignsys{
+  x_{3} = 5 - x_{1} - 2x_{2};
+  x_{4} = 3 - x_{1} \+ \.;
+  x_{5} = 2 \+   \. - x_{2};
+  \hline;
+  z     = \. \+ 3x_{1} + 5x_{2}}
+  \end{equation*}
+  #+end_scriptsize
+
+  Se puede representar como:
+
+  #+begin_scriptsize
+  \begin{equation*}
+   \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+   \sysdelim..
+   \systeme{%
+    x_{1}+2x_{2}+x_{3} = 5,
+    x_{1}+x_{4}       = 3,
+    x_{2}       +x_{5} = 2,
+    -3x_{1}-5x_{2}+z =0}
+  \end{equation*}
+  #+end_scriptsize
+
+  y esto se puede representar usando solo coeficientes
+
+#+begin_export latex
+  \only<1>{\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, x_{1} x_{2} x_{3} x_{4} x_{5} z C; 
+ ,    1     2     1     0     0  0 5; 
+ ,    1     0     0     1     0  0 3;
+ ,    0     1     0     0     1  0 2;
+ ,    -3   -5     0     0     0  1 0}\]}
+\uncover<2>{\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, x_{1} x_{2} \circled{x_{3}} \circled{x_{4}} \circled{x_{5}} z C; 
+ ,    1     2     1     0     0  0 5; 
+ ,    1     0     0     1     0  0 3;
+ ,    0     1     0     0     1  0 2;
+ ,    -3   -5     0     0     0  1 0}\]}
+#+end_export
+
+* El segundo tablero simplex
+
+  Primero lo reescribimos
+
+    #+begin_scriptsize
+    \begin{equation*}
+    \spalignsys{
+    x_{1} = 3 \+ \. - x_{4};
+    x_{3} = 2 - 2x_{2} + x_{4};
+    x_{5} = 2 - x_{2} \+ \.;
+    \hline;
+    z     = 9 + 5x_{2} - 3x_{4}}\qquad\to\qquad
+    \spalignsys{
+    x_{3} = 2 - 2x_{2} + x_{4};
+    x_{1} = 3 \+ \. - x_{4};
+    x_{5} = 2 - x_{2} \+ \.;
+    \hline;
+    z     = 9 + 5x_{2} - 3x_{4}}
+    \end{equation*}
+    #+end_scriptsize
+
+#+beamer: \pause
+
+  Se puede representar como:
+
+  #+begin_scriptsize
+  \begin{equation*}
+   \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+   \sysdelim..
+   \systeme{%
+    2x_{2}+x_{3} -x_{4}      = 2,
+    x_{1}+x_{4}  = 3,
+    x_{2}       +x_{5} = 2,
+    -5x_{2}+3x_{4}+z =9}
+  \end{equation*}
+  #+end_scriptsize
+
+#+beamer: \pause
+
+  y esto se puede representar usando solo coeficientes
+
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} x_{2} \circled{x_{3}} x_{4} \circled{x_{5}} z C; 
+ ,    0     2     1    -1     0  0 2;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     1     0     0     1  0 2;
+ ,    0   -5     0     3     0  1 9}\]
+
+* Comparación
+
+  Comparemos las matrices que hemos obtenido
+
+  #+begin_scriptsize
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, x_{1} x_{2} \circled{x_{3}} \circled{x_{4}} \circled{x_{5}} z C; 
+ ,    1     2     1     0     0  0 5; 
+ ,    1     0     0     1     0  0 3;
+ ,    0     1     0     0     1  0 2;
+ ,    -3   -5     0     0     0  1 0}\to
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} x_{2} \circled{x_{3}} x_{4} \circled{x_{5}} z C; 
+ ,    0     2     1    -1     0  0 2;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     1     0     0     1  0 2;
+ ,    0   -5     0     3     0  1 9}
+\]
+ #+end_scriptsize
+
+  El paso usando solo matrices se hace del siguiente modo:
+
+  - Como los coeficientes de la función objetivo \(z\) cambiaron de
+    signo, ahora la meta es que todos los números del último renglón
+    (excepto quizás el último) sean positivos.
+    #+beamer: \pause
+  - Las variables \(x_{1}, x_{2}\) tienen entrada correspondiente
+    negativa, por lo que cualquiera podría aumentarse. En nuestro
+    caso, decidimos aumentar \(x_{1}\).
+    #+beamer: \pause
+  - Para encontrar el renglón correspondiente a la ecuación que
+    debemos usar, hacemos las divisiones: \(5/1=5\), \(3/1=3\). Como
+    el segundo resultado es el menor, usaremos el segundo renglón.
+
+* Continuación 
+
+  #+begin_scriptsize
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, x_{1} x_{2} \circled{x_{3}} \circled{x_{4}} \circled{x_{5}} z C; 
+ ,    1     2     1     0     0  0 5; 
+ ,    \circled{1}     0     0     1     0  0 3;
+ ,    0     1     0     0     1  0 2;
+ ,    -3   -5     0     0     0  1 0}\to
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} x_{2} \circled{x_{3}} x_{4} \circled{x_{5}} z C; 
+ ,    0     2     1    -1     0  0 2;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     1     0     0     1  0 2;
+ ,    0   -5     0     3     0  1 9}
+\]
+ #+end_scriptsize
+
+  - La entrada que obtuvimos en el paso anterior está marcada con un
+    círculo. La variable básica que correspondía al segundo renglón es
+    \(x_{4}\). Eso dice que en el siguiente paso, \(x_{4}\) deja de
+    ser variable básica.
+    #+beamer: \pause
+  - Usando la entrada marcada como /pivote/, por medio de operaciones
+    elementales de renglores, hacemos que en esa entrada haya un 1, y
+    que sea la única entrada diferente de cero en la columna.
+
+* Paso final 
+
+  - Tenemos entonces la matriz:
+  #+begin_scriptsize
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} x_{2} \circled{x_{3}} x_{4} \circled{x_{5}} z C; 
+ ,    0     2     1    -1     0  0 2;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     1     0     0     1  0 2;
+ ,    0   -5     0     3     0  1 9}
+\]
+ #+end_scriptsize
+    #+beamer: \pause
+  - Como la única entrada negativa en el último renglón corresponde a
+    \(x_{2}\), sabemos que tal variable será básica en el siguiente
+    paso.
+    #+beamer: \pause
+  - Ahora hacemos las divisiones \(2/2=1\), \(2/1=2\). El menor
+    resultado es el primero, por lo que obtenemos la entrada que
+    usaremos como pivote. Observemos que la variable básica del primer
+    renglón es \(x_{3}\), esa dejará de ser básica.
+  #+begin_scriptsize
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} x_{2} \circled{x_{3}} x_{4} \circled{x_{5}} z C; 
+ ,    0     \circled{2}     1    -1     0  0 2;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     1     0     0     1  0 2;
+ ,    0   -5     0     3     0  1 9}
+\]
+ #+end_scriptsize
+
+* Continuación
+
+  - Estamos con:
+  #+begin_scriptsize
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} \circled{x_{2}} x_{3} x_{4} \circled{x_{5}} z C; 
+ ,    0     \circled{2}     1    -1     0  0 2;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     1     0     0     1  0 2;
+ ,    0   -5     0     3     0  1 9}
+\]
+ #+end_scriptsize
+    #+beamer: \pause
+  - Dividimos todo el primer renglón entre 2:
+  #+begin_scriptsize
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} \circled{x_{2}} x_{3} x_{4} \circled{x_{5}} z C; 
+ ,    0     \circled{1}     \frac{1}{2}    -\frac{1}{2}     0  0 1;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     1     0     0     1  0 2;
+ ,    0   -5     0     3     0  1 9}
+\]
+ #+end_scriptsize
+    #+beamer: \pause
+  - Ahora usamos esa entrada para hacer las otras entradas en la
+    columna igual a cero.
+  #+begin_scriptsize
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} \circled{x_{2}} x_{3} x_{4} \circled{x_{5}} z C; 
+ ,    0     \circled{1}     \frac{1}{2}    -\frac{1}{2}     0  0 1;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     0     -\frac{1}{2}     \frac{1}{2}     1  0 1;
+ ,    0   0     \frac{5}{2}     \frac{1}{2}     0  1 14}
+\]
+ #+end_scriptsize
+
+* Conclusión
+
+\[ \def\spalignendline{\cr}
+   \spalignrun{\bordermatrix{\the\spaligntoks}}
+{, \circled{x_{1}} \circled{x_{2}} x_{3} x_{4} \circled{x_{5}} z C; 
+ ,    0     1     \frac{1}{2}    -\frac{1}{2}     0  0 1;
+ ,    1     0     0     1     0  0 3; 
+ ,    0     0     -\frac{1}{2}     \frac{1}{2}     1  0 1;
+ ,    0   0     \frac{5}{2}     \frac{1}{2}     0  1 14}
+\]
+
+Como antes pudimos pasar del tablero simplex a la matriz, ahora
+podríamos pasar de la matriz al tablero simplex.
+
+Puesto que las variables no básicas \(x_{3}, x_{4}\) se toman iguales
+a cero, de la matriz obtenemos \(x_{2}=1\), \(x_{1}=3\), \(x_{5}=1\),
+que dan un valor máximo de \(z=14\).
