@@ -1,0 +1,53 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 4 de mayo de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=3cm]{geometry}
+#+latex_header: \usepackage{systeme}
+# #+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+1. Resuelve
+   # kolman ejercicio 2 p.163
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}+2x_{2}+x_{4}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      x_{1}+3x_{2}-x_{3}+x_{4} \leq 5,
+      x_{1}+7x_{2}+x_{3} \geq 4,
+      4x_{1}+2x_{2}+x_{4} = 3}\\
+       & x_{1},x_{2},x_{3},x_{4} \geq 0
+   \end{aligned}
+   \end{equation*}
+
+2. Resuelve
+   # kolman ejercicio 3, p. 163
+   \begin{equation*}
+    \begin{aligned}
+   \text{Minimizar} \quad & 3x_{1}-2x_{2}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      x_{1}+x_{2}+2x_{3}\geq 7,
+      2x_{1}+x_{2}+x_{3}\geq 4}\\
+       & x_{1},x_{2},x_{3} \geq 0
+   \end{aligned}
+   \end{equation*}
+
+3. Resuelve
+# kolman ejercicio 20 p. 165
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 2x_{1}+5x_{2}-x_{3}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      -4x_{1}+2x_{2}+6x_{3} = 4,
+      6x_{1}+9x_{2}+12x_{3} = 3}\\
+       & x_{1},x_{2},x_{3}\geq 0
+   \end{aligned}
+   \end{equation*}
+
