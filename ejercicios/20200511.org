@@ -1,0 +1,88 @@
+#+title: Ejercicios de programación lineal
+#+options: author:nil  ':t toc:nil
+#+date: 11 de mayo de 2020
+#+language: es
+#+latex_header: \usepackage[spanish]{babel}
+#+latex_header: \usepackage[margin=1.5cm]{geometry}
+#+latex_header: \usepackage{systeme}
+#+latex_class_options: [twocolumn]
+#+latex: \thispagestyle{empty}
+
+1. Resuelve
+   # kolman ejercicio 23 p.166
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & 3x_{1}+x_{2}-x_{3}+2x_{4}-x_{5}+2x_{6}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      2x_{1}+x_{2}-x_{3}              +x_{6} = 3,
+      3x_{1}      +2x_{3}+x_{4}+2x_{5}       = 4,
+             x_{2}-3x_{3}        +x_{5} = 2}\\
+       & x_{1},x_{2},x_{3},x_{4},x_{5},x_{6} \geq 0
+   \end{aligned}
+   \end{equation*}
+
+2. El /problema dual/ a:
+  \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & z=c^{T}x\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      Ax&\leq b\\
+       x&\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+   donde \(A\) es una matrix \(m\times n\),
+   \(x=(x_{1},\ldots,x_{n})^{T}\), \(c\in \mathbb{R}^{n}\),
+   \(b\in\mathbb{R}^{m}\), es:
+  \begin{equation*}
+    \begin{aligned}
+   \text{Minimizar} \quad & w=b^{T}y\\
+   \text{sujeto a} \quad &
+     \begin{aligned}
+      A^{T}y&\geq c\\
+       y&\geq 0
+     \end{aligned}
+   \end{aligned}
+   \end{equation*}
+   donde \(y=(y_{1},\ldots,y_{m})^{T}\).
+   Resuelve el siguiente problema. Plantea el problema dual y resuélvelo.
+   \begin{equation*}
+    \begin{aligned}
+   \text{Maximizar} \quad & x_{1}+x_{2}\\
+   \text{sujeto a} \quad &
+    \syslineskipcoeff{1.1}\setlength{\tabskip}{1pt}
+     \systeme{%
+      x_{1}+4x_{2}\leq 4,
+      3x_{1}+2x_{2}\leq 6}\\
+       & x_{1},x_{2}\geq 0
+   \end{aligned}
+   \end{equation*}
+   (Es decir, el dual del problema de maximización en forma estándar
+   es un problema de minimización. Análogamente, el dual del
+   problema de minimización es el problema de maximización.)
+
+3. Recuerda el problema de la demanda de autobuses.
+   Un estudio ha demostrado que la demanda de autobuses en cierta
+   ciudad con respecto a la hora del día está regida por la siguiente
+   tabla:
+   | Hora     | Cantidad de autobuses |
+   |----------+-----------------------|
+   | 12am-4am |                     4 |
+   | 4am-8am  |                     8 |
+   | 8am-12pm |                    10 |
+   | 12pm-4pm |                     7 |
+   | 4pm-8pm  |                    12 |
+   | 8pm-12am |                     4 |
+   Supongamos que un autobús debe operar exactamente ocho horas
+   consecutivas, y que operan en turnos empezando cada cuatro horas a
+   partir de las 12am. Plantea el problema de encontrar la cantidad
+   mínima de autobuses que deben adquirirse para cubrir la
+   demanda. [Sugerencia. Usa \(x_{1}\) para la cantidad de autobuses
+   que cubren el turno de las 12am a las 8am, \(x_{2}\) para la
+   cantidad de autobuses que cubren el turno de las 4am a las 12pm,
+   etc. Nota que el último turno va de las 8pm a las 4am del siguiente
+   día.] Escribe el problema en forma estándar. Plantea el problema
+   dual. No es necesario resolver el problema dual.
